@@ -19,7 +19,8 @@ jobs:
         pip freeze > requirements.txt
     - name: Run migrations
       run: |
-        ls -la
+        cd /home/runner/work/github-actions/
+        python manage.py make migration
         python manage.py migrate
     - name: Run tests
       run: python manage.py test
