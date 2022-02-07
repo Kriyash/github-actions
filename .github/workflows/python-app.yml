@@ -20,7 +20,7 @@ jobs:
     - name: Run migrations
       run: |
         cd /home/runner/work/github-actions/
-        python manage.py make migration
+        python manage.py make migrations
         python manage.py migrate
     - name: Run tests
       run: python manage.py test
