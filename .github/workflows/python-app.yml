@@ -19,6 +19,7 @@ jobs:
         pip freeze > requirements.txt
     - name: Run migrations
       run: |
+        ls -la/
         python manage.py migrate
     - name: Run tests
       run: python manage.py test
